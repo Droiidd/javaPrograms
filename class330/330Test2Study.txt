@@ -8,6 +8,18 @@ Q3 - Looks like a max heap, next max should be 77
 	LOOK IN TO HOW TO FILTER THROUGH
 	REMEMBER - must maintain a FULL tree.
 
+5 3 8 9 1 7 0 2 6 4
+
+P = 5
+
+4 3 8 9 1 7 0 2 6 5
+
+4 3 2 9 1 7 0 8 6 5
+
+4 3 2 0 1 7 9 8 6 5
+
+ANS : 4 3 2 0 1 5 9 8 6 7
+
 		910
 		/ \
 	       77  66
