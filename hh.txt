@@ -1,0 +1,83 @@
+things i want to bring up during quitting time
+
+-Dave jnot understanding and speaking for all climbers on the wall
+ -Doesn't climb at other gynms or outdoors, is straight up out of touch
+ -Rarely owrks wall shifts or shows up to club hours where all the regular climbers are
+ -Glorified assistant
+ Giving and recieving feedback always feels like a battle. I give feedback on a route and am shutdown, 
+ he gives me feedback on my route and blatantly calls it an awful route...? Seems fair
+ -ALex Sam Dave and Elliot being a powerhouse of faggotry and friendship
+ -Always taking weird breadcrumbs
+ -Knowledge is undermined
+ -They do all the real climbing wall and PA shit without me
+ -Finished my stuff with the comp as agreed
+
+Gender categories were blatantly awful
+
+Routes being numbered from L-R instead of least to most difficult
+Scoring was ridiculous I stand by it
+
+Pro staff has a trickle down affect of power and ideas, this creates extremely limited creative freedom for any position below/= PA
+
+All pro staff are self absorbed (Maybe not the right phrase) with their own idea for how they want a certain struct to function within
+the program. In recent history when this occurs, pro-staff tend to take on the entire project either on their own, or with limited help.
+Updates for their current project are usually hjeld privately within the group until their finalized idea is created, or at least
+established enough to present to other staff members. This creates the following issues: 1.) A fundamental disconnect between pro-staff and
+normal staff. This is difficult to address since not every pro staff idea is garunteed, therefore presenting this idea to staff and not
+being able to execute it later is bad. Or is it? It shows that were trying, trying new things and potentially even listening to the community
+for ideas whether they work or not. Is OA afraid of failing?
+ The leadership team is not a team, but four seperate entities working within the same shared space / resources. Each pro-staff is their own
+capable individual who tends to rely more on themselves than others to work on projects. This feeds to the previous issue regarding communication
+and multi-tasking projects.
+ The staff don't know how to truly operate as a team, instead of running any time of problem solving approach, (D&C) they choose to brute force problems
+only calling to other individuals when they are unable to solve the problem themselves. 
+This means that all large projects are typically handled by pro-staff, while smaller ones are handled by normal.
+But again, is this not normal for the fulltime workers to be more invested into the program than normal co-workers?
+Short answer, yes its normal, long answer its horribly inneficient.
+
+	See often times the normal workers (NW) want to take these positions on themselves. Whether for resume, pay or just for the fun of planning
+an event. The issue lies in creative liberties given by pro staff, as well as the indirect lack of transparency of expecations. If pro staff don't want
+any spiders in fright night because they're afraid of them, they aint included.
+
+
+
+public static void mergeSort(ArrayList<Integer> arr, int x) {
+        if (x < 2) {
+            return;
+        }
+        int mid = x / 2;
+        ArrayList<Integer> leftArr = new ArrayList();
+        ArrayList<Integer> rightArr = new ArrayList();
+
+        for (int i = 0; i < mid; i++) {
+            leftArr.set(i, arr.get(i));
+
+        }
+        for (int i = mid; i < x; i++) {
+            rightArr.set(i - mid, arr.get(i));
+
+        }
+        mergeSort(leftArr, mid);
+        mergeSort(rightArr, x - mid);
+
+        merge(arr, leftArr, rightArr, mid, x - mid);
+
+    }
+
+    public static void merge(ArrayList<Integer> arr, ArrayList<Integer> lArr, ArrayList<Integer> rArr, int left, int right) {
+
+        int i = 0, j = 0, k = 0;
+        while (k < left && j < right) {
+            if (lArr.get(i) <= rArr.get(i)) {
+                arr.set(k++, lArr.get(i++));
+            } else {
+                arr.set(k++, rArr.get(j++));
+            }
+        }
+        while (i < left) {
+            arr.set(k++, lArr.get(i++));
+        }
+        while (j < right) {
+            arr.set(k++, rArr.get(j++));
+        }
+    }
