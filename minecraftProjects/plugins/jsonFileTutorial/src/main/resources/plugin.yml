@@ -1,0 +1,8 @@
+name: JSONFileTutorial
+version: '${project.version}'
+main: droiidpelaez.jsonfiletutorial.JSONFileTutorial
+api-version: 1.19
+description: just a test plugin
+commands:
+  note:
+
