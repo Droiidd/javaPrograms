@@ -5,11 +5,9 @@ import droiidpelaez.jsonfiletutorial.JSONFileTutorial;
 import droiidpelaez.jsonfiletutorial.models.Note;
 import org.bukkit.entity.Player;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class noteStorageUtil {
 
@@ -29,6 +27,7 @@ public class noteStorageUtil {
         }
         return note;
     }
+
     // ==== DELETE ====
     public static void deleteNote(String id){
     for(Note note : noteList){
@@ -39,11 +38,12 @@ public class noteStorageUtil {
          }
     try{
         saveNotes();
+
     }catch (IOException e){
         e.printStackTrace();
     }
-
     }
+
     // ==== READ ====
     public static Note findNote(String id) {
         for (Note note : noteList) {
@@ -64,10 +64,8 @@ public class noteStorageUtil {
                 }catch (IOException e){
                     e.printStackTrace();
                 }
-
                 return note;
             }
-
         }
         try{
             saveNotes();
@@ -77,6 +75,8 @@ public class noteStorageUtil {
         return null;
     }
 
+    //This method is used to save the notes to the JSON file of the server. It moves all local data within the server to the file, which can be read -
+    // - upon server start up: allowing you to access to the previous data.
     public static void saveNotes() throws IOException {
         Gson gson = new Gson();
         File file = new File(JSONFileTutorial.getPlugin().getDataFolder().getAbsolutePath()+"/notes.json");
@@ -88,8 +88,23 @@ public class noteStorageUtil {
         writer.close();
         System.out.println("Notes saved.");
     }
+    //Returns the list of notes held in local data.
+    public static ArrayList<Note> findAllNotes(){
+        return noteList;
+    }
 
+    public static void loadNotes() throws IOException {
+        Gson gson = new Gson();
+        File file = new File(JSONFileTutorial.getPlugin().getDataFolder().getAbsolutePath()+"/notes.json");
+        if(file.exists()){
+            Reader reader = new FileReader(file);
+            Note[] n = gson.fromJson(reader, Note[].class);
+            noteList = new ArrayList<>(Arrays.asList(n));
+            System.out.println("Notes loaded.");
 
+        }
+
+    }
 
 }
 
