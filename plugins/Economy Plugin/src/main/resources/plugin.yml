@@ -1,0 +1,5 @@
+name: EconomyPlugin
+version: '${project.version}'
+main: droiidpelaez.economyplugin.EconomyPlugin
+api-version: 1.19
+description: Basic economy plugin. Adds currency system and wallet to vanilla game.
