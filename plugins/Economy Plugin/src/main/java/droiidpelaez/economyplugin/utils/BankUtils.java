@@ -34,9 +34,4 @@ public class BankUtils {
         p.sendMessage(ChatColor.GRAY+"Remaining balance: $"+bankList.get(p.getUniqueId()));
     }
     // ==== MISC ====
-    
-
-
-
-
 }
