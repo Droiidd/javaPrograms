@@ -53,7 +53,7 @@ public class createNoteCommand implements CommandExecutor {
             else if(args[0].toLowerCase().compareTo(delete) == 0){
                 ArrayList<Note> noteList = noteStorageUtil.findAllNotes();
                 String all = "all";
-                if(args[1].length() == 0){
+                if(args[1] == null){
                     p.sendMessage(ChatColor.RED+"Incorrect usage, please try /note delete \"ID\"");
                     return true;
                 }

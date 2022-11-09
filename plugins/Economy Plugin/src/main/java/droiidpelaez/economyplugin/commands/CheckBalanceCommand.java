@@ -15,6 +15,8 @@ public class CheckBalanceCommand implements CommandExecutor {
         if(sender instanceof Player){
             Player p = (Player) sender;
             HashMap<UUID,Double> playerBank = BankUtils.listAllBanks();
+            if(playerBank.containsKey(p.getUniqueId()) != true){ BankUtils.createBankAccount(p);}
+            else
             p.sendMessage(p.getDisplayName()+"'s balance  :  $"+ playerBank.get(p.getUniqueId()));
         }
         return true;
