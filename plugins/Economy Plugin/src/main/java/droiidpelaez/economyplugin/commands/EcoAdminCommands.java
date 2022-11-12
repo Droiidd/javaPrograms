@@ -29,31 +29,35 @@ public class EcoAdminCommands implements CommandExecutor {
             // CASE : add
             if(args[0].toLowerCase().compareTo(add) == 0){
                 //Handles the /eco add ____ case : null player input
-                if(args[1] == null){ p.sendMessage("Please specify a player."); return true; }
+                p.sendMessage("Your message is:\n"+args[0]+" "+args[1]+" "+ args[2]);
+
+                if(args[1] == null){ p.sendMessage("Please specify a player.");  }
                 //This saves a player object of the target.
                 Player target = Bukkit.getServer().getPlayerExact(args[1]);
                 //This handles offline players, or misspelled players
                 if(target == null){ p.sendMessage(ChatColor.GRAY+"This player is not online."); }
                 //Reading the amount input to make sure it's a number
-                for(int i = 0; i< args[1].length();i++) {
-                    if (Character.isDigit(args[1].charAt(i)) == false) {
-                        p.sendMessage(ChatColor.RED + "Incorrect usage, please try /eco add {player} {amount}");
-                        return true;
-                    }
-                }
+//                for(int i = 0; i< args[2].length();i++) {
+//                    if (Character.isDigit(args[1].charAt(i)) == false) {
+//                        p.sendMessage();
+//                        p.sendMessage(ChatColor.RED + "Incorrect usage, please try /eco add {player} {amount}");
+//                        return true;
+//                    }
+//                }
                 Double deposit = Double.parseDouble(args[2]);
                 BankUtils.updateBalance(target, deposit);
+                p.sendMessage("Money deposited!");
 
             }
             // CASE : remove
             else if(args[0].toLowerCase().compareTo(remove) == 0){
-                if(args[1] == null){ p.sendMessage("Please specify a player."); return true; }
+                if(args[1] == null){ p.sendMessage("Please specify a player.");  }
 
                 Player target = Bukkit.getServer().getPlayerExact(args[1]);
 
                 if(target == null){ p.sendMessage(ChatColor.GRAY+"This player is not online."); }
                 for(int i = 0; i< args[1].length();i++) {
-                    if (Character.isDigit(args[1].charAt(i)) == false) {
+                    if (Character.isDigit(args[2].charAt(i)) == false) {
                         p.sendMessage(ChatColor.RED + "Incorrect usage, please try /eco remove {player} {amount}");
                         return true;
                     }
