@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jsonFileTutorial/JSONFileTutorial.iml" filepath="$PROJECT_DIR$/jsonFileTutorial/JSONFileTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bingBongCommand/bingBong.iml" filepath="$PROJECT_DIR$/bingBongCommand/bingBong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Economy Plugin/economyPlugin.iml" filepath="$PROJECT_DIR$/Economy Plugin/economyPlugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/plugins.iml" filepath="$PROJECT_DIR$/.idea/plugins.iml" />
+    </modules>
+  </component>
+</project>

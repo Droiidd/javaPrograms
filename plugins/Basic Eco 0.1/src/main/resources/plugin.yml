@@ -1,0 +1,10 @@
+name: BasicEco
+version: '${project.version}'
+main: droiidpelaez.basiceco.BasicEco
+api-version: 1.19
+commands:
+  eco:
+  balance:
+    aliases:
+      - bal
+
