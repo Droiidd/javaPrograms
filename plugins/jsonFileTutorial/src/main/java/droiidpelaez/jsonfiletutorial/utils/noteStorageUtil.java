@@ -3,6 +3,7 @@ package droiidpelaez.jsonfiletutorial.utils;
 import com.google.gson.Gson;
 import droiidpelaez.jsonfiletutorial.JSONFileTutorial;
 import droiidpelaez.jsonfiletutorial.models.Note;
+import org.bukkit.Note;
 import org.bukkit.entity.Player;
 
 import java.io.*;
@@ -11,7 +12,7 @@ import java.util.Arrays;
 
 public class noteStorageUtil {
 
-    private static ArrayList<Note> noteList = new ArrayList<>();
+    private static ArrayList<No> noteList = new ArrayList<>();
 
 
     //Using the CRUD Database method: Create, read, update, delete
