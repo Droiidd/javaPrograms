@@ -1,7 +1,0 @@
-name: BingBong
-version: '${project.version}'
-main: droiidpelaez.bingbong.BingBong
-api-version: 1.19
-description: run a command to see if the plugin functions
-commands:
-  bing
